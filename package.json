@@ -1,0 +1,27 @@
+{
+  "name": "webhooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aymeric-perard/Webhooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aymeric-perard/Webhooks/issues"
+  },
+  "homepage": "https://github.com/aymeric-perard/Webhooks#readme",
+  "dependencies": {
+    "@netlify/functions": "^1.2.0",
+    "@types/node": "^18.7.18",
+    "node-fetch": "^3.2.10"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
