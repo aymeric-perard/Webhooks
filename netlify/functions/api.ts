@@ -58,7 +58,7 @@ const parseBitBucketMessage = function (body): Array<Object> {
   const commit = parsedBody.changesets.values[0].toCommit;
   const changes = parsedBody.changesets.values[0].changes;
   const branch = parsedBody.refChanges[0].refId.replace("refs/heads/", "");
-  const commitUrl = "https://agile.richemont.com/bitbucket/projects/SAP1/repos/hr-myspot-pmp-mobile/commits/" + commit.id;
+  const commitUrl = "https://agile.richemont.com/bitbucket/projects/SAP1/repos/" + parsedBody.repository.slug + "/commits/" + commit.id;
 
   let blocks = [];
   blocks.push(textBlock(parsedBody.repository.slug + " - " + branch, "large"));
