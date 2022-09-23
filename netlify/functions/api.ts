@@ -10,6 +10,7 @@ const handler: Handler = async (event, context) => {
   const path = event.path.replace(/\.netlify\/functions\/[^/]+/, "");
   const segments = path.split("/").filter((e) => e);
 
+  console.log(event.body);
   switch (event.httpMethod) {
     case "POST":
       // const url = "https://webhook.site/e51daed1-a204-463e-93f6-ca0310bbe48e";
@@ -23,7 +24,7 @@ const handler: Handler = async (event, context) => {
 
       return {
         statusCode: response.status,
-        body: response.statusText + " " + (await response.text()), //JSON.stringify(response.body),
+        body: response.statusText + " " + (await response.text()),
       };
     // Fallthrough case
     default:
