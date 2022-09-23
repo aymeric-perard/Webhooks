@@ -53,7 +53,7 @@ const createTeamsCard = function (body): string {
   return JSON.stringify(card);
 };
 
-const parseBitBucketMessage = function (body): Array {
+const parseBitBucketMessage = function (body): Array<Object> {
   const parsedBody = JSON.parse(body);
   const commit = parsedBody.changesets.values[0].toCommit;
   const changes = parsedBody.changesets.values[0].changes;
